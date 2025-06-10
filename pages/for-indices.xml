@@ -175,7 +175,7 @@
     y="240"
     width="150"
     height="60"
-    text="💡 Veja como o índice $i posiciona cada iglu!"
+    text="💡 Veja como o índice i posiciona cada iglu!"
     color="#ffff99"
     font-size="12"
   />
