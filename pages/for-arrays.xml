@@ -1,3 +1,94 @@
-<page id="for-arrays" bg_color="black">
-  <agent id="titulo" x="center" y="center" text="Página for-arrays" color="white" font-size="24" />
-</page>
+<page id="for-arrays" bg_color="#2a5d31" bg_image="forest-bg.png" bg_music="osts-retro-forest.mp3">
+  
+  <!-- Título da Lição -->
+  <agent id="titulo-arrays" x="250" y="15" width="300" height="30"
+         text="🍎 Lição 2: Iterando Arrays" 
+         color="#ffffff" font-size="20" animation="typewriter" />
+  
+  <!-- Narrativa introdutória -->
+  <agent id="narrativa-arrays-1" x="50" y="70" width="700" height="20"
+         text="Na floresta mágica, nosso herói encontra uma cesta de frutas..." 
+         color="#ffffff" font-size="16" animation="typewriter" />
+  
+  <agent id="narrativa-arrays-2" x="50" y="100" width="700" height="20"
+         text="Para mostrar cada fruta, ele usará o poder do fab-for!" 
+         color="#ffffff" font-size="16" animation="typewriter" />
+  
+  <!-- Herói da floresta -->
+  <agent id="heroi-arrays" x="50" y="200" width="120" height="120"
+         image="forest-hero-idle.png" animation="fade-in" />
+  
+  <!-- Seção: Sintaxe Básica -->
+  <agent id="sintaxe-titulo" x="250" y="140" width="200" height="20"
+         text="📝 Sintaxe Básica:" 
+         color="#ffff99" font-size="16" animation="typewriter" />
+  
+  <agent id="sintaxe-exemplo" x="250" y="170" width="400" height="20"
+         text="each=\"item in $lista\"" 
+         color="#87CEEB" font-size="14" />
+  
+  <!-- Demonstração com frutas -->
+  <agent id="frutas-titulo" x="250" y="210" width="200" height="20"
+         text="🍎 Cesta de Frutas:" 
+         color="#00ff88" font-size="16" animation="typewriter" />
+  
+  <!-- Mostrar a lista atual -->
+  <agent id="frutas-lista" x="250" y="240" width="300" height="20"
+         text="$frutas" 
+         color="#ffffff" font-size="14" />
+  
+  <!-- Iteração das frutas -->
+  <fab-for each="fruta in $frutas" index="i">
+    <agent id="fruta-$i" x="$250 + $i * 100" y="270" width="80" height="60"
+           text="🍎 $fruta" color="#ff6b6b" font-size="14" 
+           animation="bounce-in" />
+  </fab-for>
+  
+  <!-- Botões para modificar lista -->
+  <agent id="botao-adicionar" x="250" y="350" width="120" height="30"
+         text="➕ Adicionar Uva" color="#ffffff" font-size="12"
+         on_click="set(frutas, $frutas.concat(['uva']))" />
+  
+  <agent id="botao-remover" x="390" y="350" width="120" height="30"
+         text="➖ Remover Última" color="#ffffff" font-size="12"
+         on_click="set(frutas, $frutas.slice(0, -1))" />
+  
+  <agent id="botao-reset" x="530" y="350" width="100" height="30"
+         text="🔄 Reset" color="#ffffff" font-size="12"
+         on_click="set(frutas, ['maçã', 'banana', 'laranja'])" />
+  
+  <!-- Seção: Explicação Técnica -->
+  <agent id="explicacao-titulo" x="250" y="400" width="200" height="20"
+         text="🔍 Como Funciona:" 
+         color="#87CEEB" font-size="16" animation="typewriter" />
+  
+  <agent id="explicacao-1" x="250" y="430" width="500" height="20"
+         text="1. O fab-for pega cada item da lista $frutas" 
+         color="#ffffff" font-size="14" />
+  
+  <agent id="explicacao-2" x="250" y="450" width="500" height="20"
+         text="2. Para cada item, cria um agent com ID único" 
+         color="#ffffff" font-size="14" />
+  
+  <agent id="explicacao-3" x="250" y="470" width="500" height="20"
+         text="3. A variável $fruta contém o valor atual" 
+         color="#ffffff" font-size="14" />
+  
+  <!-- Dica importante -->
+  <agent id="dica-sintaxe" x="50" y="350" width="180" height="60"
+         text="💡 IMPORTANTE: Use 'in' na sintaxe: item in $lista" 
+         color="#ffff99" font-size="12" animation="typewriter" />
+  
+  <!-- Navegação -->
+  <agent id="voltar-intro-for" x="50" y="520" width="100" height="30"
+         text="⬅️ Voltar" color="#cccccc" font-size="14"
+         on_click="goToPage('for-intro')" />
+  
+  <agent id="proximo-indices" x="300" y="520" width="200" height="30"
+         text="➡️ Próximo: Índices" color="#87CEEB" font-size="14"
+         on_click="goToPage('for-indices')" />
+  
+  <!-- Progresso -->
+  <agent id="progresso-arrays" x="20" y="20" width="150" height="20"
+         text="Progresso: 2/8" color="#888888" font-size="12" />
+</page> 
