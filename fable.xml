@@ -10,7 +10,7 @@
   <property name="frutas" default="['maçã', 'banana', 'laranja']" />
   <property name="numeros" default="[10, 20, 30, 40, 50]" />
   <property name="herois" default="['Aragorn', 'Legolas', 'Gimli']" />
-  <property name="lista" default="[]" />
+  <property name="lista" default="[0,1,2,3,4,5]" />
 
   <!-- Páginas do tutorial fab-for -->
   <for-intro />
