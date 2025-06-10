@@ -1,4 +1,4 @@
-<page id="for-indices" bg_color="#87CEEB" bg_music="osts-fear.mp3">
+<page id="for-indices" bg_color="#87CEEB" bg_image="snow-bg-neve.png" bg_music="osts-fear.mp3">
   
   <!-- Título -->
   <agent id="titulo-indices" x="270" y="15" width="260" height="30"
@@ -32,15 +32,12 @@
          text="🏠 Vila de Iglus:" 
          color="#004080" font-size="16" animation="typewriter" />
   
-  <!-- Lista de materiais -->
-  <property name="materiais" default="['gelo', 'neve', 'pedra']" />
-  
   <agent id="materiais-lista" x="250" y="240" width="300" height="20"
-         text="Materiais: $materiais" 
+         text="Materiais: gelo, neve, pedra" 
          color="#ffffff" font-size="14" />
   
   <!-- Iteração com índices -->
-  <fab-for each="material in $materiais" index="i">
+  <fab-for each="material in ['gelo', 'neve', 'pedra']" index="i">
     <!-- Iglus numerados -->
     <agent id="iglu-$i" x="$250 + $i * 120" y="280" width="100" height="80"
            image="snow-igloo.png" />
@@ -67,14 +64,9 @@
          text="i=0: x=250 | i=1: x=370 | i=2: x=490" 
          color="#cccccc" font-size="12" />
   
-  <!-- Botões para modificar -->
-  <agent id="botao-add-material" x="550" y="240" width="150" height="30"
-         text="➕ Adicionar Tijolo" color="#ffffff" font-size="12"
-         on_click="set(materiais, $materiais.concat(['tijolo']))" />
-  
-  <agent id="botao-reset-materiais" x="550" y="280" width="150" height="30"
-         text="🔄 Reset Materiais" color="#ffffff" font-size="12"
-         on_click="set(materiais, ['gelo', 'neve', 'pedra'])" />
+  <!-- Demonstração de uso de índices -->
+  <agent id="dica-indice-uso" x="550" y="240" width="150" height="60"
+         text="💡 Veja como o índice $i posiciona cada iglu!" color="#ffff99" font-size="12" />
   
   <!-- Dicas práticas -->
   <agent id="dica-indices" x="50" y="350" width="180" height="80"
