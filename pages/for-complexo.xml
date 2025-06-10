@@ -1,3 +1,253 @@
-<page id="for-complexo" bg_color="black">
-  <agent id="titulo" x="center" y="center" text="Página for-complexo" color="white" font-size="24" />
+<page id="for-complexo" bg_color="#2c1810" bg_music="osts-fear.mp3">
+  <!-- Título -->
+  <agent
+    id="titulo-complexo-for"
+    x="250"
+    y="15"
+    width="300"
+    height="30"
+    text="🧙 Lição 5: Loops Complexos"
+    color="#ff6666"
+    font-size="20"
+    animation="typewriter"
+  />
+
+  <!-- Narrativa introdutória -->
+  <agent
+    id="narrativa-complexo-1"
+    x="50"
+    y="70"
+    width="700"
+    height="20"
+    text="No cemitério assombrado, o necromante invoca múltiplas criaturas..."
+    color="#cccccc"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <agent
+    id="narrativa-complexo-2"
+    x="50"
+    y="100"
+    width="700"
+    height="20"
+    text="Com loops aninhados e objetos, ele cria exércitos organizados!"
+    color="#cccccc"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <!-- Necromante -->
+  <agent
+    id="necromante"
+    x="50"
+    y="200"
+    width="120"
+    height="120"
+    image="cemetery-skeleton.png"
+    animation="wiggle"
+  />
+
+  <!-- Seção: Loops Aninhados -->
+  <agent
+    id="aninhados-titulo"
+    x="250"
+    y="140"
+    width="250"
+    height="20"
+    text="🔗 Loops Aninhados:"
+    color="#ffff99"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <agent
+    id="aninhados-desc"
+    x="250"
+    y="170"
+    width="400"
+    height="20"
+    text="fab-for dentro de fab-for - cria grids!"
+    color="#87CEEB"
+    font-size="14"
+  />
+
+  <!-- Demonstração: Grid de Túmulos -->
+  <agent
+    id="grid-titulo"
+    x="250"
+    y="210"
+    width="200"
+    height="20"
+    text="⚰️ Grid de Túmulos:"
+    color="#8b4513"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <!-- Grid 3x2 -->
+  <fab-for each="linha in 2" index="y">
+    <fab-for each="coluna in 3" index="x">
+      <agent
+        id="tumulo-$y-$x"
+        x="$250 + $x * 80"
+        y="$250 + $y * 70"
+        width="60"
+        height="50"
+        image="cemetery-tombstone-1.png"
+        animation="fade-in"
+      />
+
+      <agent
+        id="coord-$y-$x"
+        x="$260 + $x * 80"
+        y="$240 + $y * 70"
+        width="40"
+        height="15"
+        text="$x,$y"
+        color="#ffffff"
+        font-size="10"
+      />
+    </fab-for>
+  </fab-for>
+
+  <!-- Seção: Objetos Complexos -->
+  <agent
+    id="objetos-titulo"
+    x="500"
+    y="140"
+    width="250"
+    height="20"
+    text="📦 Iterando Objetos:"
+    color="#ff6b6b"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <!-- Lista de criaturas demonstrativa -->
+
+  <!-- Iteração de nomes simples -->
+  <fab-for each="criatura in ['Esqueleto', 'Fantasma', 'Zumbi']" index="i">
+    <agent
+      id="nome-criatura-$i"
+      x="500"
+      y="$180 + $i * 45"
+      width="120"
+      height="15"
+      text="$criatura"
+      color="#ff6666"
+      font-size="14"
+    />
+
+    <agent
+      id="status-criatura-$i"
+      x="500"
+      y="$195 + $i * 45"
+      width="120"
+      height="15"
+      text="Criatura $i"
+      color="#ffaa00"
+      font-size="12"
+    />
+  </fab-for>
+
+  <!-- Seção: Matemática Avançada -->
+  <agent
+    id="matematica-titulo"
+    x="250"
+    y="400"
+    width="250"
+    height="20"
+    text="🧮 Posições Matemáticas:"
+    color="#00ffff"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <!-- Linha de invocação -->
+  <fab-for each="i in 6" index="idx">
+    <agent
+      id="circulo-$idx"
+      x="$250 + $idx * 60"
+      y="480"
+      width="30"
+      height="30"
+      text="👻"
+      font-size="20"
+      animation="float"
+    />
+  </fab-for>
+
+  <agent
+    id="centro-circulo"
+    x="400"
+    y="450"
+    width="30"
+    height="30"
+    text="🔮"
+    font-size="25"
+    animation="glow"
+  />
+
+  <!-- Explicações técnicas -->
+  <agent
+    id="explicacao-grid"
+    x="50"
+    y="350"
+    width="180"
+    height="60"
+    text="💡 GRID: Use dois loops aninhados para criar matrizes"
+    color="#ffff99"
+    font-size="12"
+    animation="typewriter"
+  />
+
+  <agent
+    id="explicacao-posicao"
+    x="50"
+    y="420"
+    width="180"
+    height="60"
+    text="📐 POSIÇÃO: Use $i para calcular posições automáticas"
+    color="#ffff99"
+    font-size="12"
+    animation="typewriter"
+  />
+
+  <!-- Navegação -->
+  <agent
+    id="voltar-numerico"
+    x="50"
+    y="520"
+    width="100"
+    height="30"
+    text="⬅️ Voltar"
+    color="#cccccc"
+    font-size="14"
+    on_click="goToPage('for-numerico')"
+  />
+
+  <agent
+    id="proximo-condicional"
+    x="300"
+    y="520"
+    width="200"
+    height="30"
+    text="➡️ Próximo: fab-for + fab-if"
+    color="#ff6666"
+    font-size="14"
+    on_click="goToPage('for-condicional')"
+  />
+
+  <!-- Progresso -->
+  <agent
+    id="progresso-complexo-for"
+    x="20"
+    y="20"
+    width="150"
+    height="20"
+    text="Progresso: 5/8"
+    color="#cccccc"
+    font-size="12"
+  />
 </page>
