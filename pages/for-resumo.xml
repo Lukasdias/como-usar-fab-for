@@ -113,7 +113,7 @@
          color="#cccccc" font-size="12" />
   
   <agent id="ex1-codigo" x="570" y="275" width="200" height="30"
-         text="<fab-for each=\"item in $lista\"> <agent text=\"$item\" /> </fab-for>" 
+         /> <agent text=\"$item\" /> </fab-for>" 
          color="#87ceeb" font-size="10" />
   
   <!-- Exemplo 2: Grid -->
