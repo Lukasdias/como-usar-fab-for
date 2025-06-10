@@ -128,8 +128,8 @@
   <!-- Explicação do que aconteceu -->
   <agent
     id="explicacao-demo"
-    x="400"
-    y="300"
+    x="500"
+    y="280"
     width="300"
     height="40"
     text="O fab-for criou 3 elementos automaticamente, um para cada letra!"
