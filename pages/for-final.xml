@@ -1,3 +1,279 @@
-<page id="for-final" bg_color="black">
-  <agent id="titulo" x="center" y="center" text="Página for-final" color="white" font-size="24" />
+<page
+  id="for-final"
+  bg_color="#4b0082"
+  bg_image="forest-bg.png"
+  bg_music="osts-retro-forest.mp3"
+>
+  <!-- Título do desafio -->
+  <agent
+    id="titulo-final-for"
+    x="200"
+    y="15"
+    width="400"
+    height="30"
+    text="🏆 DESAFIO FINAL: Mestre do fab-for!"
+    color="#ffd700"
+    font-size="20"
+    animation="typewriter"
+  />
+
+  <!-- Narrativa épica -->
+  <agent
+    id="narrativa-final-for-1"
+    x="50"
+    y="70"
+    width="700"
+    height="20"
+    text="O momento chegou, jovem programador! O desafio supremo te aguarda..."
+    color="#ffffff"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <agent
+    id="narrativa-final-for-2"
+    x="50"
+    y="100"
+    width="700"
+    height="20"
+    text="Crie um sistema completo usando todos os poderes do fab-for!"
+    color="#ffffff"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <!-- Cenário: Loja mágica -->
+  <agent
+    id="mago-lojista"
+    x="50"
+    y="250"
+    width="120"
+    height="120"
+    image="forest-hero-idle.png"
+    animation="fade-in"
+  />
+
+  <!-- Demonstração completa de fab-for -->
+
+  <!-- Interface simples -->
+  <agent
+    id="info-loja"
+    x="50"
+    y="150"
+    width="150"
+    height="60"
+    text="🏪 Loja Mágica - Demonstração de fab-for completa!"
+    color="#ffd700"
+    font-size="14"
+  />
+
+  <!-- DESAFIO 1: Loja Básica (Listagem com fab-for) -->
+  <agent
+    id="desafio1-titulo"
+    x="250"
+    y="140"
+    width="200"
+    height="20"
+    text="🎯 Desafio 1: Loja Básica"
+    color="#ffff99"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <!-- Lista simples de itens -->
+  <fab-for each="produto in ['Poção', 'Espada', 'Escudo', 'Arco']" index="i">
+    <agent
+      id="produto-$i"
+      x="$250 + $i * 120"
+      y="170"
+      width="100"
+      height="25"
+      text="$produto"
+      color="#ffffff"
+      font-size="12"
+    />
+
+    <agent
+      id="preco-$i"
+      x="$250 + $i * 120"
+      y="200"
+      width="100"
+      height="20"
+      text="💰 Item $i"
+      color="#ffaa00"
+      font-size="11"
+    />
+
+    <agent
+      id="botao-$i"
+      x="$250 + $i * 120"
+      y="230"
+      width="80"
+      height="25"
+      text="🛒 Ver"
+      color="#ffffff"
+      font-size="10"
+      animation="hover-glow"
+    />
+  </fab-for>
+
+  <!-- DESAFIO 2: Filtros com fab-if -->
+  <agent
+    id="desafio2-titulo"
+    x="250"
+    y="300"
+    width="250"
+    height="20"
+    text="🎯 Desafio 2: Filtros com fab-if"
+    color="#ff6b6b"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <!-- Mostrar apenas itens específicos -->
+  <fab-for each="item in ['Poção', 'Espada', 'Escudo', 'Arco']" index="j">
+    <fab-if when="$j > 1">
+      <agent
+        id="item-filtrado-$j"
+        x="$250 + $j * 80"
+        y="330"
+        width="70"
+        height="20"
+        text="$item"
+        color="#ff6666"
+        font-size="12"
+      />
+    </fab-if>
+  </fab-for>
+
+  <!-- DESAFIO 3: Exemplo com números -->
+  <agent
+    id="desafio3-titulo"
+    x="250"
+    y="380"
+    width="250"
+    height="20"
+    text="🎯 Desafio 3: Loops com Números"
+    color="#00ffff"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <!-- Loop numérico -->
+  <fab-for each="i in 5" index="idx">
+    <agent
+      id="numero-$idx"
+      x="$250 + $idx * 60"
+      y="410"
+      width="50"
+      height="30"
+      text="$i"
+      color="#ffd700"
+      font-size="16"
+    />
+  </fab-for>
+
+  <!-- DESAFIO 4: Alternância de cores -->
+  <agent
+    id="desafio4-titulo"
+    x="250"
+    y="460"
+    width="250"
+    height="20"
+    text="🌈 Desafio 4: Cores Alternadas"
+    color="#ff69b4"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <!-- Cores alternadas com fab-if -->
+  <fab-for each="letra in ['A', 'B', 'C', 'D', 'E']" index="m">
+    <fab-if when="$m % 2 = 0">
+      <agent
+        id="letra-azul-$m"
+        x="$250 + $m * 70"
+        y="490"
+        width="60"
+        height="30"
+        text="$letra"
+        color="#87CEEB"
+        font-size="16"
+      />
+    </fab-if>
+
+    <fab-if when="$m % 2 = 1">
+      <agent
+        id="letra-rosa-$m"
+        x="$250 + $m * 70"
+        y="490"
+        width="60"
+        height="30"
+        text="$letra"
+        color="#ff69b4"
+        font-size="16"
+      />
+    </fab-if>
+  </fab-for>
+
+  <!-- Mensagem de sucesso -->
+  <agent
+    id="sucesso-final"
+    x="200"
+    y="400"
+    width="400"
+    height="20"
+    text="🌟 Parabéns! Você completou todos os desafios de fab-for!"
+    color="#ffffff"
+    font-size="12"
+    animation="typewriter"
+  />
+
+  <!-- Navegação -->
+  <agent
+    id="voltar-condicional-for"
+    x="50"
+    y="520"
+    width="100"
+    height="30"
+    text="⬅️ Voltar"
+    color="#cccccc"
+    font-size="14"
+    on_click="goToPage('for-condicional')"
+  />
+
+  <agent
+    id="ir-resumo-for-final"
+    x="200"
+    y="520"
+    width="150"
+    height="30"
+    text="📚 Ver Resumo"
+    color="#87CEEB"
+    font-size="14"
+    on_click="goToPage('for-resumo')"
+  />
+
+  <agent
+    id="voltar-inicio-for"
+    x="400"
+    y="520"
+    width="150"
+    height="30"
+    text="🏠 Voltar ao Início"
+    color="#ffd700"
+    font-size="14"
+    on_click="goToPage('for-intro')"
+  />
+
+  <!-- Progresso final -->
+  <agent
+    id="progresso-final-for"
+    x="20"
+    y="20"
+    width="170"
+    height="20"
+    text="Progresso: 7/8 - QUASE LÁ!"
+    color="#ffd700"
+    font-size="12"
+  />
 </page>
