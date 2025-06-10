@@ -1,9 +1,4 @@
-<page
-  id="for-resumo"
-  bg_color="#1e1e2e"
-  bg_image="tech-bg-lab.png"
-  bg_music="osts-stage.mp3"
->
+<page id="for-resumo" bg_color="#1e1e2e" bg_music="osts-stage.mp3">
   <!-- Título -->
   <agent
     id="titulo-resumo-for"
