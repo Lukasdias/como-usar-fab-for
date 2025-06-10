@@ -1,4 +1,9 @@
-<page id="for-arrays" bg_color="#2a5d31" bg_music="osts-retro-forest.mp3">
+<page
+  id="for-arrays"
+  bg_color="#2a5d31"
+  bg_image="forest-bg.png"
+  bg_music="osts-retro-forest.mp3"
+>
   <!-- Título da Lição -->
   <agent
     id="titulo-arrays"
@@ -67,9 +72,9 @@
     y="170"
     width="400"
     height="20"
-    text="'each=\item in $lista\'"
+    text="each='item in $lista'"
     color="#87CEEB"
-    font-size="14'"
+    font-size="14"
   />
 
   <!-- Demonstração com frutas -->
