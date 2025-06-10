@@ -1,4 +1,4 @@
-<page id="for-arrays" bg_color="#2a5d31" bg_image="forest-bg.png" bg_music="osts-retro-forest.mp3">
+<page id="for-arrays" bg_color="#2a5d31" bg_music="osts-retro-forest.mp3">
   
   <!-- Título da Lição -->
   <agent id="titulo-arrays" x="250" y="15" width="300" height="30"
