@@ -1,10 +1,23 @@
 <fable>
-  <config font-family="Schoolbell" />
+  <config font-family="Fredericka the Great" />
 
-  <property name="pontuacao" default="0" />
-  <property name="visitante" default="Aventureiro" />
+  <!-- Variáveis globais do tutorial fab-for -->
+  <property name="progresso_for" default="0" />
+  <property name="pontuacao_for" default="0" />
+  <property name="licoes_for_completas" default="[]" />
 
-  <start />
-  <middle />
-  <ending />
+  <!-- Lista de exemplo para demonstrações -->
+  <property name="frutas" default="['maçã', 'banana', 'laranja']" />
+  <property name="numeros" default="[10, 20, 30, 40, 50]" />
+  <property name="herois" default="['Aragorn', 'Legolas', 'Gimli']" />
+
+  <!-- Páginas do tutorial fab-for -->
+  <for-intro />
+  <for-arrays />
+  <for-indices />
+  <for-numerico />
+  <for-complexo />
+  <for-condicional />
+  <for-final />
+  <for-resumo />
 </fable>
