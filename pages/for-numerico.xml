@@ -117,7 +117,7 @@
       id="jarro-$idx"
       x="$250 + $idx * 70"
       y="280"
-      text="🏺"
+      text="🏺 Text"
       animation="bounce-in"
     />
 
