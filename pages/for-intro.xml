@@ -1,3 +1,213 @@
-<page id="for-intro" bg_color="black">
-  <agent id="titulo" x="center" y="center" text="Página for-intro" color="white" font-size="24" />
+<page
+  id="for-intro"
+  bg_color="#1a2332"
+  bg_image="tech-bg-lab.png"
+  bg_music="osts-stage.mp3"
+>
+  <!-- Título Principal -->
+  <agent
+    id="titulo-for-intro"
+    x="200"
+    y="15"
+    width="400"
+    height="30"
+    text="🔄 Academia do fab-for: Loops e Repetições"
+    color="#00ff88"
+    font-size="20"
+    animation="typewriter"
+  />
+
+  <!-- Professor Bot -->
+  <agent
+    id="professor-for"
+    x="50"
+    y="180"
+    width="120"
+    height="120"
+    image="tech-acid-1.png"
+    animation="glow"
+  />
+
+  <!-- Narrativa do professor -->
+  <agent
+    id="fala-professor-for-1"
+    x="200"
+    y="100"
+    width="350"
+    height="20"
+    text="Olá novamente, jovem programador! Sou o Professor Bot."
+    color="#ffffff"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <agent
+    id="fala-professor-for-2"
+    x="200"
+    y="130"
+    width="350"
+    height="20"
+    text="Agora vou te ensinar o poderoso fab-for!"
+    color="#ffffff"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <!-- Explicação narrativa -->
+  <agent
+    id="narrativa-for-1"
+    x="50"
+    y="320"
+    width="700"
+    height="20"
+    text="O fab-for é como uma máquina de repetição mágica..."
+    color="#ffff99"
+    font-size="18"
+    animation="typewriter"
+  />
+
+  <agent
+    id="narrativa-for-2"
+    x="50"
+    y="350"
+    width="700"
+    height="20"
+    text="Ele pega uma lista e cria elementos para cada item dela!"
+    color="#ffff99"
+    font-size="18"
+    animation="typewriter"
+  />
+
+  <agent
+    id="narrativa-for-3"
+    x="50"
+    y="380"
+    width="700"
+    height="20"
+    text="Imaginem ter que escrever 100 elementos iguais... fab-for faz isso automaticamente!"
+    color="#cccccc"
+    font-size="14"
+    animation="typewriter"
+  />
+
+  <!-- Exemplo visual simples -->
+  <agent
+    id="exemplo-titulo"
+    x="400"
+    y="200"
+    width="200"
+    height="20"
+    text="👀 Exemplo Simples:"
+    color="#ff6b6b"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <!-- Lista de exemplo -->
+  <agent
+    id="lista-exemplo"
+    x="400"
+    y="230"
+    width="200"
+    height="20"
+    text="Lista: ['A', 'B', 'C']"
+    color="#87CEEB"
+    font-size="14"
+  />
+
+  <!-- Demonstração fab-for básica -->
+  <fab-for each="letra in ['A', 'B', 'C']" index="i">
+    <agent
+      id="demo-$i"
+      x="$400 + $i * 60"
+      y="260"
+      width="50"
+      height="30"
+      text="$letra"
+      color="#00ff00"
+      font-size="16"
+      animation="bounce-in"
+    />
+  </fab-for>
+
+  <!-- Explicação do que aconteceu -->
+  <agent
+    id="explicacao-demo"
+    x="400"
+    y="300"
+    width="300"
+    height="40"
+    text="O fab-for criou 3 elementos automaticamente, um para cada letra!"
+    color="#ffffff"
+    font-size="12"
+    animation="typewriter"
+  />
+
+  <!-- Botão interativo -->
+  <agent
+    id="botao-demo-for"
+    x="50"
+    y="450"
+    width="150"
+    height="30"
+    text="Clique para aprender!"
+    color="#ffffff"
+    font-size="14"
+    animation="hover-bounce"
+    on_click="set(progresso_for, 1)"
+  />
+
+  <!-- Mensagem de encorajamento -->
+  <fab-if when="$progresso_for = 1">
+    <agent
+      id="encorajamento"
+      x="220"
+      y="450"
+      width="300"
+      height="30"
+      text="🎉 Vamos explorar o mundo dos loops!"
+      color="#00ff00"
+      font-size="14"
+      animation="bounce-in"
+    />
+  </fab-if>
+
+  <!-- Navegação -->
+  <agent
+    id="proximo-for"
+    x="300"
+    y="520"
+    width="200"
+    height="30"
+    text="➡️ Próxima Lição: Arrays"
+    color="#87CEEB"
+    font-size="16"
+    animation="hover-glow"
+    on_click="goToPage('for-arrays')"
+  />
+
+  <agent
+    id="ir-resumo-for"
+    x="520"
+    y="520"
+    width="150"
+    height="30"
+    text="📚 Ver Resumo"
+    color="#ffff99"
+    font-size="14"
+    animation="hover-glow"
+    on_click="goToPage('for-resumo')"
+  />
+
+  <!-- Progresso -->
+  <agent
+    id="progresso-for-intro"
+    x="20"
+    y="20"
+    width="150"
+    height="20"
+    text="Progresso: 1/8"
+    color="#888888"
+    font-size="12"
+  />
 </page>
