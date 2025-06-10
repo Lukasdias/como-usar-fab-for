@@ -1,0 +1,3 @@
+<page id="for-complexo" bg_color="black">
+  <agent id="titulo" x="center" y="center" text="Página for-complexo" color="white" font-size="24" />
+</page>
