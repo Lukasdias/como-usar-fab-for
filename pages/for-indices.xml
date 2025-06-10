@@ -187,7 +187,7 @@
     y="350"
     width="180"
     height="80"
-    text="💡 DICAS: - Índice começa em 0 - Use $i para posições - $i + 1 para numerar"
+    text="💡 DICAS: - Índice começa em 0 - Use i para posições - i + 1 para numerar"
     color="#ffff99"
     font-size="12"
     animation="typewriter"
