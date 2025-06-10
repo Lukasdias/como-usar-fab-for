@@ -117,10 +117,7 @@
       id="jarro-$idx"
       x="$250 + $idx * 70"
       y="280"
-      width="60"
-      height="60"
       text="🏺"
-      font-size="30"
       animation="bounce-in"
     />
 
