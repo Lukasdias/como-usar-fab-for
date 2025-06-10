@@ -30,7 +30,7 @@
     y="100"
     width="350"
     height="20"
-    text="Olá novamente, jovem programador! Sou o Professor Bot."
+    text="Olá novamente, jovem programador!"
     color="#ffffff"
     font-size="16"
     animation="typewriter"
