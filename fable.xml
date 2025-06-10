@@ -15,4 +15,5 @@
   <!-- Páginas do tutorial fab-for -->
   <for-intro />
   <for-arrays />
+  <for-indices />
 </fable>
