@@ -1,3 +1,310 @@
-<page id="for-condicional" bg_color="black">
-  <agent id="titulo" x="center" y="center" text="Página for-condicional" color="white" font-size="24" />
+<page
+  id="for-condicional"
+  bg_color="#0a0a0a"
+  bg_image="tech-bg-lab.png"
+  bg_music="osts-stage.mp3"
+>
+  <!-- Título -->
+  <agent
+    id="titulo-condicional-for"
+    x="220"
+    y="15"
+    width="360"
+    height="30"
+    text="🔄+❓ Lição 6: fab-for + fab-if"
+    color="#00ffff"
+    font-size="20"
+    animation="typewriter"
+  />
+
+  <!-- Narrativa introdutória -->
+  <agent
+    id="narrativa-condicional-1"
+    x="50"
+    y="70"
+    width="700"
+    height="20"
+    text="No laboratório quântico, a IA combina repetição com lógica condicional..."
+    color="#ffff99"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <agent
+    id="narrativa-condicional-2"
+    x="50"
+    y="100"
+    width="700"
+    height="20"
+    text="fab-for + fab-if = poder ilimitado para criar interfaces dinâmicas!"
+    color="#ffff99"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <!-- IA Científica -->
+  <agent
+    id="ia-cientifica"
+    x="50"
+    y="200"
+    width="120"
+    height="120"
+    image="tech-acid-1.png"
+    animation="glow"
+  />
+
+  <!-- Seção: Filtros Condicionais -->
+  <agent
+    id="filtros-titulo"
+    x="250"
+    y="140"
+    width="250"
+    height="20"
+    text="🔍 Filtros Condicionais:"
+    color="#ffff99"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <agent
+    id="filtros-desc"
+    x="250"
+    y="170"
+    width="450"
+    height="20"
+    text="Mostre apenas elementos que atendem condições específicas"
+    color="#87CEEB"
+    font-size="14"
+  />
+
+  <!-- Lista de números para demonstração -->
+
+  <!-- Demonstração: Números Pares -->
+  <agent
+    id="pares-titulo"
+    x="250"
+    y="210"
+    width="200"
+    height="20"
+    text="🔢 Apenas Números Pares:"
+    color="#00ff88"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <fab-for each="numero in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" index="i">
+    <fab-if when="$numero % 2 = 0">
+      <agent
+        id="par-$i"
+        x="$250 + $i * 60"
+        y="240"
+        width="50"
+        height="30"
+        text="$numero"
+        color="#00ff00"
+        font-size="16"
+        animation="bounce-in"
+      />
+    </fab-if>
+  </fab-for>
+
+  <!-- Demonstração: Números Maiores que 5 -->
+  <agent
+    id="maiores-titulo"
+    x="250"
+    y="290"
+    width="250"
+    height="20"
+    text="📈 Números > 5:"
+    color="#ff6b6b"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <fab-for each="numero in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" index="j">
+    <fab-if when="$numero > 5">
+      <agent
+        id="maior-$j"
+        x="$250 + $j * 70"
+        y="320"
+        width="60"
+        height="30"
+        text="🔴 $numero"
+        color="#ff6666"
+        font-size="14"
+        animation="fade-in"
+      />
+    </fab-if>
+  </fab-for>
+
+  <!-- Seção: Interface Dinâmica -->
+  <agent
+    id="interface-titulo"
+    x="500"
+    y="140"
+    width="200"
+    height="20"
+    text="🎮 Interface Dinâmica:"
+    color="#9966ff"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <!-- Lista simplificada de jogadores -->
+
+  <!-- Mostrar apenas jogadores ativos -->
+  <agent
+    id="ativos-titulo"
+    x="500"
+    y="170"
+    width="200"
+    height="20"
+    text="👥 Jogadores Ativos:"
+    color="#00ffff"
+    font-size="14"
+    animation="typewriter"
+  />
+
+  <fab-for each="jogador in ['Ana', 'Carlos', 'Diana']" index="k">
+    <agent
+      id="jogador-ativo-$k"
+      x="500"
+      y="$200 + $k * 30"
+      width="150"
+      height="15"
+      text="$jogador: Ativo"
+      color="#00ff88"
+      font-size="12"
+    />
+
+    <!-- Destaque para alguns jogadores -->
+    <fab-if when="$k = 0">
+      <agent
+        id="destaque-$k"
+        x="660"
+        y="$200 + $k * 30"
+        width="30"
+        height="15"
+        text="🏆"
+        font-size="12"
+        animation="glow"
+      />
+    </fab-if>
+  </fab-for>
+
+  <!-- Seção: Alternância de Cores -->
+  <agent
+    id="alternancia-titulo"
+    x="250"
+    y="370"
+    width="250"
+    height="20"
+    text="🌈 Alternância de Cores:"
+    color="#ffaa00"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <!-- Lista com cores alternadas -->
+  <fab-for each="item in ['A', 'B', 'C', 'D', 'E']" index="m">
+    <fab-if when="$m % 2 = 0">
+      <agent
+        id="item-azul-$m"
+        x="$250 + $m * 80"
+        y="400"
+        width="70"
+        height="30"
+        text="$item"
+        color="#87CEEB"
+        font-size="16"
+      />
+    </fab-if>
+
+    <fab-if when="$m % 2 = 1">
+      <agent
+        id="item-rosa-$m"
+        x="$250 + $m * 80"
+        y="400"
+        width="70"
+        height="30"
+        text="$item"
+        color="#ff69b4"
+        font-size="16"
+      />
+    </fab-if>
+  </fab-for>
+
+  <!-- Explicações técnicas -->
+  <agent
+    id="explicacao-combo-1"
+    x="50"
+    y="350"
+    width="180"
+    height="40"
+    text="💡 FILTROS: Use fab-if dentro de fab-for para filtrar"
+    color="#ffff99"
+    font-size="12"
+    animation="typewriter"
+  />
+
+  <agent
+    id="explicacao-combo-2"
+    x="50"
+    y="400"
+    width="180"
+    height="40"
+    text="🎨 PADRÕES: Use $i % 2 para alternar cores/estilos"
+    color="#ffff99"
+    font-size="12"
+    animation="typewriter"
+  />
+
+  <agent
+    id="explicacao-combo-3"
+    x="50"
+    y="450"
+    width="180"
+    height="40"
+    text="🎮 GAMES: Crie HUDs e menus dinâmicos"
+    color="#ffff99"
+    font-size="12"
+    animation="typewriter"
+  />
+
+  <!-- Navegação -->
+  <agent
+    id="voltar-complexo-for"
+    x="50"
+    y="520"
+    width="100"
+    height="30"
+    text="⬅️ Voltar"
+    color="#cccccc"
+    font-size="14"
+    on_click="goToPage('for-complexo')"
+  />
+
+  <agent
+    id="proximo-final-for"
+    x="300"
+    y="520"
+    width="200"
+    height="30"
+    text="➡️ Desafio Final!"
+    color="#00ffff"
+    font-size="14"
+    on_click="goToPage('for-final')"
+  />
+
+  <!-- Progresso -->
+  <agent
+    id="progresso-condicional-for"
+    x="20"
+    y="20"
+    width="150"
+    height="20"
+    text="Progresso: 6/8"
+    color="#00ffff"
+    font-size="12"
+  />
 </page>
