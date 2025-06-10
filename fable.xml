@@ -1,5 +1,5 @@
 <fable>
-  <config font-family="Fredericka the Great" />
+  <config font-family="Poppins" />
 
   <!-- Variáveis globais do tutorial fab-for -->
   <property name="progresso_for" default="0" />
