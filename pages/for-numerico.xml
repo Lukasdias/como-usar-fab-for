@@ -1,1 +1,311 @@
-<page id="for-numerico" bg_color="#d4a574" bg_music="osts-retro-forest.mp3" />
+<page
+  id="for-numerico"
+  bg_color="#d4a574"
+  bg_image="desert-bg.png"
+  bg_music="osts-retro-forest.mp3"
+>
+  <!-- Título -->
+  <agent
+    id="titulo-numerico"
+    x="260"
+    y="15"
+    width="280"
+    height="30"
+    text="🔢 Lição 4: Loops Numéricos"
+    color="#8b4513"
+    font-size="20"
+    animation="typewriter"
+  />
+
+  <!-- Narrativa introdutória -->
+  <agent
+    id="narrativa-numerico-1"
+    x="50"
+    y="70"
+    width="700"
+    height="20"
+    text="No deserto infinito, nosso explorador conta as dunas de areia..."
+    color="#654321"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <agent
+    id="narrativa-numerico-2"
+    x="50"
+    y="100"
+    width="700"
+    height="20"
+    text="Com loops numéricos, ele pode criar padrões sem precisar de listas!"
+    color="#654321"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <!-- Explorador -->
+  <agent
+    id="explorador-numerico"
+    x="50"
+    y="200"
+    width="120"
+    height="120"
+    image="desert-jones.png"
+    animation="fade-in"
+  />
+
+  <!-- Seção: Sintaxe Numérica -->
+  <agent
+    id="sintaxe-num-titulo"
+    x="250"
+    y="140"
+    width="250"
+    height="20"
+    text="📝 Sintaxe Numérica:"
+    color="#ffff99"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <agent
+    id="sintaxe-num-exemplo"
+    x="250"
+    y="170"
+    width="300"
+    height="20"
+    text="each='i in 5' - gera 0,1,2,3,4"
+    color="#87CEEB"
+    font-size="14"
+  />
+
+  <!-- Demonstração: Contagem Simples -->
+  <agent
+    id="contagem-titulo"
+    x="250"
+    y="210"
+    width="200"
+    height="20"
+    text="🏺 Contagem de Jarros:"
+    color="#8b4513"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <!-- Variável para controlar quantidade -->
+  <property name="quantidade_jarros" default="5" />
+
+  <agent
+    id="quantidade-display"
+    x="250"
+    y="240"
+    width="200"
+    height="20"
+    text="Quantidade: $quantidade_jarros"
+    color="#ffffff"
+    font-size="14"
+  />
+
+  <!-- Demonstração de loop numérico -->
+  <agent
+    id="explicacao-loop"
+    x="470"
+    y="240"
+    width="200"
+    height="40"
+    text="Loop cria $quantidade_jarros jarros automaticamente!"
+    color="#ffff99"
+    font-size="12"
+  />
+
+  <!-- Iteração numérica -->
+  <fab-for each="i in $quantidade_jarros" index="idx">
+    <agent
+      id="jarro-$idx"
+      x="$250 + $idx * 70"
+      y="280"
+      width="60"
+      height="60"
+      text="🏺"
+      font-size="30"
+      animation="bounce-in"
+    />
+
+    <agent
+      id="numero-jarro-$idx"
+      x="$270 + $idx * 70"
+      y="350"
+      width="20"
+      height="20"
+      text="$i + 1"
+      color="#ffffff"
+      font-size="14"
+    />
+  </fab-for>
+
+  <!-- Seção: Range com Início e Fim -->
+  <agent
+    id="range-titulo"
+    x="250"
+    y="390"
+    width="200"
+    height="20"
+    text="📊 Range Personalizado:"
+    color="#ff6b6b"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <agent
+    id="range-sintaxe"
+    x="250"
+    y="420"
+    width="300"
+    height="20"
+    text="each='i in 3..7' - gera 3,4,5,6,7"
+    color="#87CEEB"
+    font-size="14"
+  />
+
+  <!-- Demonstração de range -->
+  <fab-for each="numero in 3..7" index="j">
+    <agent
+      id="numero-range-$j"
+      x="$250 + $j * 60"
+      y="450"
+      width="50"
+      height="30"
+      text="🔢 $numero"
+      color="#ffaa00"
+      font-size="12"
+      animation="fade-in"
+    />
+  </fab-for>
+
+  <!-- Seção: Explicação Técnica -->
+  <agent
+    id="explicacao-num-titulo"
+    x="550"
+    y="200"
+    width="200"
+    height="20"
+    text="🔍 Tipos de Loops:"
+    color="#004080"
+    font-size="16"
+    animation="typewriter"
+  />
+
+  <agent
+    id="tipo-1"
+    x="550"
+    y="230"
+    width="200"
+    height="20"
+    text="each='i in 5'"
+    color="#ffffff"
+    font-size="14"
+  />
+
+  <agent
+    id="tipo-1-desc"
+    x="550"
+    y="250"
+    width="200"
+    height="20"
+    text="→ 0, 1, 2, 3, 4"
+    color="#cccccc"
+    font-size="12"
+  />
+
+  <agent
+    id="tipo-2"
+    x="550"
+    y="280"
+    width="200"
+    height="20"
+    text="each='i in 2..5'"
+    color="#ffffff"
+    font-size="14"
+  />
+
+  <agent
+    id="tipo-2-desc"
+    x="550"
+    y="300"
+    width="200"
+    height="20"
+    text="→ 2, 3, 4, 5"
+    color="#cccccc"
+    font-size="12"
+  />
+
+  <agent
+    id="tipo-3"
+    x="550"
+    y="330"
+    width="200"
+    height="20"
+    text="each='i in $variavel'"
+    color="#ffffff"
+    font-size="14"
+  />
+
+  <agent
+    id="tipo-3-desc"
+    x="550"
+    y="350"
+    width="200"
+    height="20"
+    text="→ 0 até $variavel-1"
+    color="#cccccc"
+    font-size="12"
+  />
+
+  <!-- Dica prática -->
+  <agent
+    id="dica-numerico"
+    x="50"
+    y="380"
+    width="180"
+    height="80"
+    text="💡 ÚTIL PARA: - Criar grades - Gerar menus - Padrões repetitivos"
+    color="#ffff99"
+    font-size="12"
+    animation="typewriter"
+  />
+
+  <!-- Navegação -->
+  <agent
+    id="voltar-indices"
+    x="50"
+    y="520"
+    width="100"
+    height="30"
+    text="⬅️ Voltar"
+    color="#8b4513"
+    font-size="14"
+    on_click="goToPage('for-indices')"
+  />
+
+  <agent
+    id="proximo-complexo"
+    x="300"
+    y="520"
+    width="200"
+    height="30"
+    text="➡️ Próximo: Loops Complexos"
+    color="#654321"
+    font-size="14"
+    on_click="goToPage('for-complexo')"
+  />
+
+  <!-- Progresso -->
+  <agent
+    id="progresso-numerico"
+    x="20"
+    y="20"
+    width="150"
+    height="20"
+    text="Progresso: 4/8"
+    color="#654321"
+    font-size="12"
+  />
+</page>
