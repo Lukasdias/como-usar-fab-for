@@ -11,6 +11,7 @@
   <property name="numeros" default="[10, 20, 30, 40, 50]" />
   <property name="herois" default="['Aragorn', 'Legolas', 'Gimli']" />
   <property name="lista" default="[0,1,2,3,4,5,6,7,8,9]" />
+  <property name="quantidade_jarros" default="5" />
 
   <!-- Páginas do tutorial fab-for -->
   <for-intro />
