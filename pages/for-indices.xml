@@ -152,7 +152,7 @@
     y="440"
     width="400"
     height="20"
-    text="x=$250 + '$i' * 120 - Espaça elementos 120px"
+    text="x=$250 + 'i' * 120 - Espaça elementos 120px"
     color="#ffffff"
     font-size="14"
   />
